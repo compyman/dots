@@ -1,0 +1,6 @@
+tunnels:
+  remit:
+    proto: http
+    addr: "5000"
+    subdomain: sendwave-nate
+    bind_tls: both
