@@ -1,14 +1,32 @@
+@define-color base03    #002b36;
+@define-color base02    #073642;
+@define-color base01    #586e75;
+@define-color base00    #657b83;
+@define-color base0     #839496;
+@define-color base1     #93a1a1;
+@define-color base2     #eee8d5;
+@define-color base3     #fdf6e3;
+@define-color yellow    #b58900;
+@define-color orange    #cb4b16;
+@define-color red       #dc322f;
+@define-color magenta   #d33682;
+@define-color violet    #6c71c4;
+@define-color blue      #268bd2;
+@define-color cyan      #2aa198;
+@define-color green     #859900;
+
 * {
     border: none;
     border-radius: 0;
     font-family: "Monaspace Neon NF";
-    font-size: 12px;
+    font-size: 16px;
     min-height: 0;
+    background-color: @base3;
+    color: @base00;
 }
 
 window#waybar {
     background: transparent;
-    color: white;
 }
 
 #window {
@@ -19,18 +37,18 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: white;
     border-top: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    color: #c9545d;
-    border-top: 2px solid #c9545d;
+    background-color: @base2;
+    color: @base01;
+    border-top: 2px solid @yellow;
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: @base2;
+    border-bottom: 2px solid @base2;
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
@@ -43,24 +61,26 @@ window#waybar {
 }
 
 #battery {
+    color: @violet;
 }
 
 #battery icon {
-    color: red;
+    color: @violet;
 }
 
 #battery.charging {
+    color: @green;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        background-color: @base2;
+        color: @base01;
     }
 }
 
 #battery.warning:not(.charging) {
-    color: white;
+    color: @red;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -78,7 +98,7 @@ window#waybar {
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    background: @violet;
 }
 
 #pulseaudio {

@@ -21,6 +21,8 @@ window {
     border:  0px;
     border-radius: 10px;
     font-size: 16px;
+    color: @base00;
+    background-color: @base3;
 }
 
 #input {
@@ -31,6 +33,7 @@ window {
     font-size: 16px;
     font-family: Monaspace Neon NF;
     background-color: @base3;
+    color: @base00;
 }
 
 #inner-box {
@@ -42,14 +45,16 @@ window {
     border-radius: 10px;
 }
 
-#selected {
+#entry:selected {
     background-color: @base2;
+}
+#text:selected {
+    color: @green;
 }
 
 #entry {
     padding: 0px;
     margin: 0px;
-    background-color: @base3;
 }
 
 #scroll {
